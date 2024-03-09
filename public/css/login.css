@@ -1,0 +1,390 @@
+@charset "UTF-8";
+.step-2 {
+  display: none;
+}
+
+/*Principal*/
+body {
+  background: white url(../imagens/fundo2.png);
+  background-position: center top;
+  /* Configura o tamanho da imagem de fundo (opcional) */
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Esconde a barra de rolagens*/
+}
+
+/*Navegação*/
+.nav-link {
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-link li {
+  float: left;
+  list-style: none;
+}
+.nav-link a {
+  display: block;
+  padding: 0 0.5em;
+  line-height: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #6ba103;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-link a {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background: #055906;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-link a:hover {
+  color: #055906;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.icone {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.icone a {
+  color: #6ba103;
+  margin: 0 15px;
+  padding: 5px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.icone a:hover {
+  color: white;
+  background: #055906;
+  border-radius: 100%;
+  padding: 11px;
+}
+
+.hamburguer {
+  transition: transform 1s ease;
+}
+.hamburguer i {
+  color: #055906;
+}
+
+.hamburguer.rotated {
+  transform: rotate(360deg);
+}
+
+#myButton {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+#myButton.rotated {
+  transform: rotate(360deg);
+}
+
+.div1 {
+  order: 1;
+}
+
+.div2 {
+  order: 2;
+}
+
+.div3 {
+  order: 3;
+}
+
+#sumir {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  border-bottom: 1px solid #e4f6c3;
+}
+
+/*------------Login-----------*/
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.login-especifico {
+  background: linear-gradient(to bottom, #055906, #6ba103);
+  border-radius: 20px;
+}
+.login-especifico h3 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.login-especifico label {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.login-especifico a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.login-especifico a:hover {
+  color: rgb(224, 222, 222);
+}
+
+/*email e senha*/
+div.sigle-inputs {
+  width: 300px;
+  margin-top: 30px;
+  margin-left: 5px;
+  position: relative; /* position: relative;altera a posição do elemento em relação ao elemento
+pai e em relação a si mesmo e onde normalmente estaria no fluxo de documento regular da página.  */
+}
+div.sigle-inputs label {
+  font-size: 16px;
+  left: 0;
+  position: absolute;
+  color: white;
+  bottom: 8px;
+  cursor: text;
+  transition: 0.5s ease-in-out;
+}
+div.sigle-inputs .input {
+  width: 100%;
+  padding: 3px;
+  background: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+}
+div.sigle-inputs .input:focus, div.sigle-inputs .input:valid {
+  border-bottom: 2px solid white;
+}
+div.sigle-inputs .input:focus ~ label, div.sigle-inputs .input:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: white;
+}
+
+/*Check box*/
+.box {
+  width: 150px;
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.box input {
+  display: none;
+}
+
+.box input + label::before {
+  content: ""; /* para gerar conteúdo em um elemento */
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
+.box input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  border: none;
+  background-color: blue;
+  padding: 1px;
+}
+
+.btn-style {
+  color: white;
+  background: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  padding: 8px 3px;
+  position: relative;
+}
+.btn-style .seta {
+  position: absolute;
+  left: 110px;
+  bottom: 10px;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.btn-style:hover {
+  background: white;
+  color: #6ba103;
+}
+.btn-style:hover .seta {
+  opacity: 1;
+  left: 125px;
+}
+.btn-style:not(:hover) .seta {
+  left: 110px;
+  opacity: 0;
+}
+
+/*-----------msg-----------*/
+.danger {
+  margin-left: 6px;
+  color: rgb(91, 0, 0);
+  font-weight: bold;
+}
+
+/*-----------Media--------------*/
+@media (max-width: 460px) {
+  /*Nav*/
+  .sumir a {
+    display: none;
+  }
+  .icone i {
+    font-size: 14px;
+  }
+  .icone a:hover {
+    color: white;
+    background: #055906;
+    border-radius: 100%;
+    padding: 5px 8px;
+  }
+  .nav-link a {
+    font-size: 15px;
+  }
+  /*Estilo footer*/
+  .estilo-footer p {
+    font-size: 19px;
+  }
+  /*login*/
+  body {
+    background: white;
+  }
+  .login-especifico {
+    background: none;
+  }
+  .login-especifico p {
+    color: #6ba103;
+  }
+  .login-especifico h3 {
+    color: #6ba103;
+  }
+  .login-especifico a {
+    color: #6ba103;
+  }
+  div.sigle-inputs {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 5px;
+    position: relative; /* position: relative;altera a posição do elemento em relação ao elemento
+pai e em relação a si mesmo e onde normalmente estaria no fluxo de documento regular da página.  */
+  }
+  div.sigle-inputs label {
+    font-size: 16px;
+    left: 0;
+    position: absolute;
+    color: #6ba103;
+    bottom: 8px;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+  }
+  div.sigle-inputs .input {
+    width: 100%;
+    padding: 3px;
+    background: transparent;
+    color: #6ba103;
+    border: 0;
+    border-bottom: 2px solid #6ba103;
+    outline: 0;
+  }
+  div.sigle-inputs .input:focus, div.sigle-inputs .input:valid {
+    border-bottom: 2px solid #6ba103;
+  }
+  div.sigle-inputs .input:focus ~ label, div.sigle-inputs .input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #6ba103;
+  }
+  .box {
+    color: #6ba103;
+  }
+  .btn-style {
+    background: #6ba103;
+  }
+  .btn-style:hover {
+    background: #055906;
+    color: white;
+  }
+}
+@media (max-width: 575.98px) { /*xs*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  /*footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /*md*/
+  /*Footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { /*lg*/
+  /*Footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) { /*xl*/ }
+
+/*# sourceMappingURL=login.css.map */

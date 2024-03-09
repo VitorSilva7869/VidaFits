@@ -1,0 +1,524 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Esconde a barra de rolagens*/
+}
+
+/*------------Navegação----------*/
+.nav-link {
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-link li {
+  float: left;
+  list-style: none;
+}
+.nav-link a {
+  display: block;
+  padding: 0 0.5em;
+  line-height: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #6ba103;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-link a {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background: #055906;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-link a:hover {
+  color: #055906;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.icone {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.icone a {
+  color: #6ba103;
+  margin: 0 15px;
+  padding: 5px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.icone a:hover {
+  color: white;
+  background: #055906;
+  border-radius: 100%;
+  padding: 11px;
+}
+
+.hamburguer {
+  transition: transform 1s ease;
+}
+.hamburguer i {
+  color: #055906;
+}
+
+.hamburguer.rotated {
+  transform: rotate(360deg);
+}
+
+#myButton {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+#myButton.rotated {
+  transform: rotate(360deg);
+}
+
+.div1 {
+  order: 1;
+}
+
+.div2 {
+  order: 2;
+}
+
+.div3 {
+  order: 3;
+}
+
+#sumir {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  border-bottom: 1px solid #e4f6c3;
+}
+
+/*------------Meditação-----------*/
+.btn-style {
+  background: none;
+  border: 2px solid #6ba103;
+  border-radius: 10px;
+  padding: 7px 15px;
+  color: #055906;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-style:hover {
+  background: #6ba103;
+  color: white;
+}
+
+.box {
+  margin-top: 60px;
+}
+
+.style-h1 {
+  color: #055906;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+}
+
+.box-circle {
+  position: relative;
+}
+.box-circle svg {
+  width: 190px;
+  height: 190px;
+  position: relative;
+}
+
+circle {
+  fill: none;
+  stroke: black;
+  stroke-width: 7;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 570;
+  stroke-dashoffset: 570;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #6ba103;
+}
+
+circle:nth-child(2) {
+  stroke: #055906;
+  transition: stroke-dashoffset 0.8s;
+}
+
+.number {
+  position: absolute;
+  right: 61px;
+  bottom: 68px;
+  color: #6ba103;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+/*---------------Calendario----------*/
+.coluna-1 {
+  background: #6ba103;
+  border-radius: 20px 0px 0px 20px;
+}
+.coluna-1 h1 {
+  font-size: 150px;
+  color: white;
+  font-weight: 700;
+  line-height: 0.7;
+}
+.coluna-1 h2 {
+  color: white;
+  font-weight: 500;
+  line-height: 0.7;
+}
+.coluna-1 h5 {
+  color: rgb(238, 235, 235);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+.coluna-1 p {
+  color: rgb(238, 235, 235);
+  line-height: 0.7;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+.coluna-1 button {
+  background: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  color: white;
+  padding: 0px 8px;
+}
+.coluna-1 button:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.borda {
+  border-top: 1px solid #e5e5e5;
+}
+
+.coluna-2 {
+  border-radius: 0 20px 20px 0;
+  border: 1px solid #e5e5e5;
+}
+.coluna-2 h3 {
+  color: #6ba103;
+  font-weight: 700;
+}
+.coluna-2 span {
+  color: #817e7e;
+  margin: 0px 8px;
+}
+.coluna-2 strong {
+  color: #6ba103;
+}
+
+.borda-b {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tableStyle th {
+  padding: 0px 22px;
+  font-size: 26px;
+  color: #817e7e;
+}
+.tableStyle td {
+  font-size: 17px;
+  padding: 13px 0;
+}
+
+.off-text {
+  color: #afaeae;
+}
+
+.active-dayy {
+  background: #6ba103;
+  border-radius: 30px;
+  color: white;
+}
+
+/*---------------Footer----------*/
+.estilo-footer {
+  margin-top: 150px;
+  background: #6ba103;
+}
+.estilo-footer p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.icone-style {
+  font-size: 20px;
+}
+
+/*--------------Media---------------------*/
+@media (max-width: 460px) {
+  /*Nav*/
+  .sumir a {
+    display: none;
+  }
+  .icone i {
+    font-size: 14px;
+  }
+  .icone a:hover {
+    color: white;
+    background: #055906;
+    border-radius: 100%;
+    padding: 5px 8px;
+  }
+  .nav-link a {
+    font-size: 15px;
+  }
+  /*Estilo footer*/
+  .estilo-footer p {
+    font-size: 19px;
+  }
+  /*----meditação-----*/
+}
+@media (max-width: 575.98px) { /*xs*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  /*------Calendario------*/
+  .mt-xs-10 {
+    margin-top: 200px;
+  }
+  .coluna-1 {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .coluna-1 h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 0.7;
+  }
+  .coluna-1 h2 {
+    font-weight: 500;
+    line-height: 0.7;
+    font-size: 20px;
+  }
+  .coluna-1 h5 {
+    display: none;
+  }
+  .coluna-1 p {
+    display: none;
+  }
+  .coluna-1 button {
+    display: none;
+  }
+  .coluna-1 .borda {
+    display: none;
+  }
+  .coluna-1 h3 {
+    display: block;
+  }
+  .coluna-2 {
+    border-radius: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .coluna-2 h3 {
+    display: none;
+  }
+  .coluna-2 span {
+    margin: 0px 1px;
+    font-size: 16px;
+  }
+  .tableStyle th {
+    padding: 0px 13px;
+    font-size: 13px;
+  }
+  .tableStyle td {
+    font-size: 10px;
+    padding: 10px 0;
+  }
+  .coluna-3 {
+    background: #6ba103;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0px 0 20px 20px;
+  }
+  .coluna-3 h5 {
+    color: rgb(238, 235, 235);
+  }
+  .coluna-3 p {
+    color: rgb(238, 235, 235);
+    line-height: 0.7;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .coluna-3 button {
+    background: none;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    padding: 0px 8px;
+  }
+  .coluna-3 button:hover {
+    color: black;
+    border: 1px solid black;
+  }
+  /*footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  /*------Calendario------*/
+  .coluna-1 h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 0.7;
+  }
+  .coluna-1 h2 {
+    font-weight: 500;
+    line-height: 0.7;
+    font-size: 16px;
+  }
+  .coluna-1 h5 {
+    color: rgb(238, 235, 235);
+    font-family: "Montserrat", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+  }
+  .coluna-1 p {
+    line-height: 0.7;
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+  .coluna-1 button {
+    border-radius: 30px;
+    padding: 0px 8px;
+  }
+  .coluna-1 .borda {
+    margin-bottom: 0px;
+  }
+  .coluna-2 h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .coluna-2 span {
+    margin: 0px 0.5px;
+    font-size: 16px;
+  }
+  .tableStyle th {
+    padding: 0px 13px;
+    font-size: 13px;
+  }
+  .tableStyle td {
+    font-size: 10px;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /*md*/
+  .btn-home a {
+    bottom: 30px; /* Posição vertical */
+    right: 1px;
+  }
+  /*------Calendario------*/
+  .coluna-1 h1 {
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 0.7;
+  }
+  .coluna-1 h2 {
+    font-weight: 500;
+    line-height: 0.7;
+    font-size: 20px;
+  }
+  .coluna-1 h5 {
+    color: rgb(238, 235, 235);
+    font-family: "Montserrat", sans-serif;
+    font-family: "Nunito", sans-serif;
+  }
+  .coluna-1 p {
+    line-height: 0.7;
+    font-size: 16px;
+    margin-bottom: 80px;
+  }
+  .coluna-1 button {
+    border-radius: 30px;
+    padding: 0px 8px;
+  }
+  .coluna-1 .borda {
+    margin-bottom: 0px;
+  }
+  .coluna-2 h3 {
+    font-weight: 700;
+  }
+  .coluna-2 span {
+    margin: 0px 3px;
+  }
+  .tableStyle th {
+    padding: 0px 18px;
+    font-size: 20px;
+  }
+  .tableStyle td {
+    font-size: 13px;
+    padding: 13px 0;
+  }
+  /*-------Footer---------*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { /*lg*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) { /*xl*/ }
+
+/*# sourceMappingURL=meditar.css.map */

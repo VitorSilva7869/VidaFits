@@ -1,0 +1,388 @@
+h1, h2 {
+  color: #6ba103;
+}
+
+
+/*------------Meditação-----------*/
+.btn-style {
+  background: none;
+  border: 2px solid #6ba103;
+  border-radius: 10px;
+  padding: 7px 15px;
+  color: #055906;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-style:hover {
+  background: #6ba103;
+  color: white;
+}
+
+.box {
+  margin-top: 60px;
+}
+
+.style-h1 {
+  color: #055906;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+}
+
+.box-circle {
+  position: relative;
+}
+.box-circle svg {
+  width: 190px;
+  height: 190px;
+  position: relative;
+}
+
+circle {
+  fill: none;
+  stroke: black;
+  stroke-width: 7;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 570;
+  stroke-dashoffset: 570;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #6ba103;
+}
+
+circle:nth-child(2) {
+  stroke: #055906;
+  transition: stroke-dashoffset 0.8s;
+}
+
+.number {
+  position: absolute;
+  right: 61px;
+  bottom: 68px;
+  color: #6ba103;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.meditar {
+  position: fixed;
+  top: 50%;
+  left: 49%;
+  padding: 0 20px;
+  transform: translate(0, -50%);
+}
+
+.container-scroll {
+  padding: 0 7.6% 0 2.1%;
+}
+
+.meditar-top {
+  margin-top: 300px;
+}
+
+/* comentario */
+.col {
+  margin-bottom: 25px;
+}
+
+.body-comentario {
+  display: flex;
+  margin-left: 10px;
+}
+.body-comentario img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  border: 1px solid #dffea5;
+}
+
+.body-nome {
+  margin-left: 10px;
+}
+.body-nome i {
+  color: #6ba103;
+}
+
+#box3 .body-nome {
+  font-size: 20px;
+}
+
+.btn-style-mais {
+  color: #6ba103;
+  background: none;
+  border-radius: 30px;
+  border: 1px solid #6ba103;
+  padding: 8px 48px;
+  position: relative;
+}
+.btn-style-mais .seta {
+  position: absolute;
+  left: 110px;
+  bottom: 12px;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.btn-style-mais:hover {
+  background: white;
+  color: #6ba103;
+}
+.btn-style-mais:hover .seta {
+  opacity: 1;
+  left: 125px;
+}
+.btn-style-mais:not(:hover) .seta {
+  left: 110px;
+  opacity: 0;
+}
+
+.btn-style-comentario {
+  color: white;
+  background: #6ba103;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #6ba103;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-style-comentario:hover {
+  background: #055906;
+  border: 1px solid #055906;
+}
+
+.star {
+  color: rgb(164, 238, 91);
+  transition: background-color 1s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.star.ativa {
+  color: #055906;
+}
+
+.estrela-radio {
+  display: none;
+}
+
+/* Modal comentario */
+#modal-comentario i {
+  color: #6ba103;
+}
+#modal-comentario .col-4 p {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+/*footer*/
+.estilo-footer {
+  margin-top: 150px;
+  background: #6ba103;
+}
+.estilo-footer p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.icone-style {
+  font-size: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  /*Nav*/
+  .sumir a {
+    display: none;
+  }
+  .icone i {
+    font-size: 14px;
+  }
+  .icone a:hover {
+    color: white;
+    background: #055906;
+    border-radius: 100%;
+    padding: 5px 8px;
+  }
+  .nav-link a {
+    font-size: 15px;
+  }
+  /*Estilo footer*/
+  .estilo-footer p {
+    font-size: 19px;
+  }
+  #box3 .btn-style-mais {
+    font-size: 13px;
+    padding: 4px 20px;
+  }
+  #box3 .btn-style-mais .seta {
+    left: 70px;
+    bottom: 9px;
+  }
+  #box3 .btn-style-mais:hover .seta {
+    left: 75px;
+  }
+  #box3 .btn-style-mais:not(:hover) .seta {
+    left: 70px;
+  }
+  #box3 h2 {
+    font-size: 20px;
+  }
+  #box3 img {
+    width: 30px;
+    height: 30px;
+  }
+  #box3 i {
+    font-size: 7px;
+  }
+  #box3 .body-nome {
+    font-size: 8px;
+  }
+  #box3 .body-comentario {
+    margin-left: 0px;
+  }
+  #box3 .card-body {
+    font-size: 10px;
+  }
+  #box3 .textarea-style {
+    font-size: 12px;
+  }
+  #box3 .textarea-style textarea {
+    font-size: 9px;
+  }
+  #box3 .star-style i {
+    font-size: 15px;
+  }
+}
+@media (min-width: 460.1px) and (max-width: 575.98px) { /*xs*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  /*footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+  /*Section*/
+  #box3 .btn-style-mais {
+    font-size: 15px;
+    padding: 4px 30px;
+  }
+  #box3 .btn-style-mais .seta {
+    left: 90px;
+    bottom: 9px;
+  }
+  #box3 .btn-style-mais:hover .seta {
+    left: 100px;
+  }
+  #box3 .btn-style-mais:not(:hover) .seta {
+    left: 90px;
+  }
+  #box3 h2 {
+    font-size: 25px;
+  }
+  #box3 img {
+    width: 40px;
+    height: 40px;
+  }
+  #box3 i {
+    font-size: 12px;
+  }
+  #box3 .body-nome {
+    font-size: 14px;
+  }
+  #box3 .body-comentario {
+    margin-left: 0px;
+  }
+  #box3 .card-body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  .propiedade h2 {
+    font-size: 17px;
+  }
+  .propiedade h4 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /*md*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+  .propiedade h2 {
+    font-size: 24px;
+  }
+  .propiedade h4 {
+    font-size: 17px;
+  }
+  #box2 h1 {
+    font-size: 30px;
+  }
+  #box2 .span {
+    font-size: 14px;
+  }
+  #box2 span {
+    font-size: 17px;
+  }
+  #box2 p {
+    font-size: 17px;
+  }
+  #box3 .btn-style-mais {
+    font-size: 15px;
+    padding: 4px 30px;
+  }
+  #box3 .btn-style-mais .seta {
+    left: 90px;
+    bottom: 9px;
+  }
+  #box3 .btn-style-mais:hover .seta {
+    left: 100px;
+  }
+  #box3 .btn-style-mais:not(:hover) .seta {
+    left: 90px;
+  }
+  #box3 h2 {
+    font-size: 25px;
+  }
+  #box3 img {
+    width: 40px;
+    height: 40px;
+  }
+  #box3 i {
+    font-size: 12px;
+  }
+  #box3 .body-nome {
+    font-size: 14px;
+  }
+  #box3 .body-comentario {
+    margin-left: 0px;
+  }
+  #box3 .card-body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { /*lg*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+  #box3 i {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) { /*xl*/ }
+
+/*# sourceMappingURL=eventoMeditar.css.map */

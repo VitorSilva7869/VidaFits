@@ -1,0 +1,276 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Esconde a barra de rolagens*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+/*Navegação*/
+.nav-link {
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-link li {
+  float: left;
+  list-style: none;
+}
+.nav-link a {
+  display: block;
+  padding: 0 0.5em;
+  line-height: 2em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #6ba103;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-link a {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background: #055906;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-link a:hover {
+  color: #055906;
+  transition: all 0.15s ease-out;
+}
+.nav-link a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.icone {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.icone a {
+  color: #6ba103;
+  margin: 0 15px;
+  padding: 5px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.icone a:hover {
+  color: white;
+  background: #055906;
+  border-radius: 100%;
+  padding: 11px;
+}
+
+.hamburguer {
+  transition: transform 1s ease;
+}
+.hamburguer i {
+  color: #055906;
+}
+
+.hamburguer.rotated {
+  transform: rotate(360deg);
+}
+
+#myButton {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+#myButton.rotated {
+  transform: rotate(360deg);
+}
+
+.div1 {
+  order: 1;
+}
+
+.div2 {
+  order: 2;
+}
+
+.div3 {
+  order: 3;
+}
+
+#sumir {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  border-bottom: 1px solid #e4f6c3;
+}
+
+/* Comentario body */
+.body-comentario {
+  display: flex;
+  margin-left: 10px;
+}
+.body-comentario img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  border: 1px solid #dffea5;
+}
+
+#comentario h1 {
+  color: #6ba103;
+}
+#comentario i {
+  color: #6ba103;
+}
+#comentario .d-flex p {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.btn-style-mais {
+  color: #6ba103;
+  background: none;
+  border-radius: 10px;
+  border: 1px solid #6ba103;
+  transition: transform 0.5s ease;
+  padding: 5px 15px;
+}
+.btn-style-mais:hover {
+  background: #6ba103;
+}
+
+/*footer*/
+.estilo-footer {
+  margin-top: 150px;
+  background: #6ba103;
+}
+.estilo-footer p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.icone-style {
+  font-size: 20px;
+}
+
+@media (max-width: 460px) {
+  /*Nav*/
+  .sumir a {
+    display: none;
+  }
+  .icone i {
+    font-size: 14px;
+  }
+  .icone a:hover {
+    color: white;
+    background: #055906;
+    border-radius: 100%;
+    padding: 5px 8px;
+  }
+  .nav-link a {
+    font-size: 15px;
+  }
+  /*Estilo footer*/
+  .estilo-footer p {
+    font-size: 19px;
+  }
+  #comentario h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 575.98px) { /*xs*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  /*footer*/
+  .estilo-footer p {
+    font-size: 14px;
+  }
+  /*Section*/
+  .propiedade h2 {
+    font-size: 17px;
+  }
+  .propiedade h4 {
+    font-size: 15px;
+  }
+  .coluna1-1 h1 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
+  /*Nav*/
+  .div1 {
+    order: 1;
+  }
+  .div2 {
+    order: 3;
+  }
+  .div3 {
+    order: 2;
+  }
+  .propiedade h2 {
+    font-size: 17px;
+  }
+  .propiedade h4 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /*md*/
+  .btn-home a {
+    bottom: 30px; /* Posição vertical */
+    right: 1px;
+  }
+  .estilo-footer p {
+    font-size: 14px;
+  }
+  .propiedade h2 {
+    font-size: 24px;
+  }
+  .propiedade h4 {
+    font-size: 17px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { /*lg*/
+  .btn-home a {
+    bottom: 50px; /* Posição vertical */
+    right: 60px;
+  }
+  .estilo-footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) { /*xl*/ }
+
+/*# sourceMappingURL=comentarioMais.css.map */
