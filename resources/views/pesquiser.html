@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VidaFits</title>
     <!--Estilo-->
-    <link rel="stylesheet" href="/css/main.css">
-
-    @yield('css')
-    @yield('js')
+    <link rel="stylesheet" href="css/test.css">
 
     <!--Fonte google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,75 +18,59 @@
 
     <!--Kit icones-->
     <script src="https://kit.fontawesome.com/8e383bc8aa.js" crossorigin="anonymous"></script>
-
-    <!-- swipper css -->
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
-
-    <!-- Adicione a biblioteca jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     
+
 </head>
 
 <body>
-<header>
+    <header>
         <nav class="navbar navbar-expand-md mx-sm-5">
             <div class="container-fluid">
                 <button id="botaoHam" class="navbar-toggler hamburguer" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars fa-xl "></i>
                 </button>
                 <div class="sumir div1">
-                    <a class="" href="/">
-                        <img class="" src="/image/VIDAFIT-removebg-preview.png" alt="" width="120" height="" class="d-inline-block align-text-top">
+                    <a class="" href="#">
+                        <img class="" src="imagens/VIDAFIT-removebg-preview.png" alt="" width="120" height="" class="d-inline-block align-text-top">
                     </a>
                 </div>
                 
                 <div class="collapse navbar-collapse justify-content-center div2" id="navbarText">
                     
                     <ul class="nav-link">
-                        <li class=""><a  href="/">Home</a></li>
-                        <li class=""><a  href="/meditar">Meditar</a></li>
-                        <li class=""><a  href="/eventos">Eventos</a></li>
+                        <li class="nav-li-link"><a  href="index.html">Home</a></li>
+                        <li class="nav-li-link"><a  href="meditar.html">Meditar</a></li>
+                        <li class="nav-li-link"><a  href="eventos.html">Eventos</a></li>
                     </ul>
                 </div>
                 
                 <div class="icone div3">
-                    <a href="/pesquisar" class="icone-style-nav">
+                    <a href="">
                         <i class="fa-solid fa-magnifying-glass fa-xl "></i>
                     </a>
-                    @if(auth()->check())
-                    <div class="btn-group">
-                        <button type="button" class=" btn-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-regular fa-user fa-xl"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <div class="container-dropdown">
-                                <div class="container-name d-flex align-items-center">
-                                    <div class="dropdown-name d-block">
-                                        <h4>{{ auth()->user()->name }}</h4>
-                                        <p>{{ auth()->user()->email }}</p>
-                                    </div>
-                                    <img src="/image/mundo.png" alt="">
-                                </div>
-                                <li><a href="{{ route('login.destroy') }}"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                    @else
-                    <a href="/login" class="icone-style-nav">
+                    <a href="login.html">
                         <i class="fa-regular fa-user fa-xl"></i>
                     </a>
-                    @endif
                 </div>
             </div>
         </nav>
     </header>
+    
+    <section class="container mt-5 pb-5">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="pesquisar" placeholder="Pesquisar meditação"><button type="button" class="btn btn-success">Right</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
 
-    @yield('conteudo')
 
     <footer class="pt-5 estilo-footer">
         <div class="container">
-            <img src="/image/LogoWhite.png" alt="logo VidaFits" width="130" height="">
+            <img src="imagens/LogoWhite.png" alt="logo VidaFits" width="130" height="">
             <div class="row mt-2 pb-5 border-bottom border-light">
                 <div id="contato" class="col-xl-4 col-lg-4 col-md-4 col-sm-7 col-xs-5 posicao">
                     <p class="ps-1 mt-1">Em um mundo agitado, a VidaFits é o seu refúgio de calma e serenidade.</p>
@@ -139,4 +120,6 @@
       
     </footer>
 </body>
+
+
 </html>

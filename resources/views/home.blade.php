@@ -9,11 +9,11 @@
     <section class="container mt-5">
         <div class="row d-flex align-items-center mb-5">
             <div class="col-md-6 coluna1-1 text-center text-md-start">
-                <h1>Encontre paz interior e equilíbrio com a meditação. Descubra um caminho de bem-estar na<span>VidaFits</span></h1>
+                <h1>Encontre paz interior e equilíbrio com a meditação. Descubra um caminho de bem-estar na<span>Amigos</span></h1>
             </div>
             <div class="col-6 d-md-block d-none btn-home">
                 <img src="/image/meditação.png" alt="Menina meditando" class="img-fluid" style="width: 400px;">
-                <a href="" class="">Começar <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/meditar" class="">Começar <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
         <div class="row d-flex align-items-center propiedade margin-t aparecer">
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="btn-final">
-            <a href="meditar.html" class="">Avançar <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/meditar" class="">Avançar <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </section>
 

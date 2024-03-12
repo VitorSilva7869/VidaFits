@@ -172,20 +172,6 @@ circle:nth-child(2) {
   margin-bottom: 0px;
 }
 
-/*footer*/
-.estilo-footer {
-  margin-top: 150px;
-  background: #6ba103;
-}
-.estilo-footer p {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
-}
-
-.icone-style {
-  font-size: 20px;
-}
 
 @media (min-width: 0px) and (max-width: 460px) {
   /*Nav*/
@@ -252,20 +238,7 @@ circle:nth-child(2) {
   }
 }
 @media (min-width: 460.1px) and (max-width: 575.98px) { /*xs*/
-  /*Nav*/
-  .div1 {
-    order: 1;
-  }
-  .div2 {
-    order: 3;
-  }
-  .div3 {
-    order: 2;
-  }
-  /*footer*/
-  .estilo-footer p {
-    font-size: 14px;
-  }
+
   /*Section*/
   #box3 .btn-style-mais {
     font-size: 15px;
@@ -302,33 +275,13 @@ circle:nth-child(2) {
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
-  /*Nav*/
-  .div1 {
-    order: 1;
-  }
-  .div2 {
-    order: 3;
-  }
-  .div3 {
-    order: 2;
-  }
-  .propiedade h2 {
-    font-size: 17px;
-  }
-  .propiedade h4 {
-    font-size: 15px;
+
+  #box3 i {
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) { /*md*/
-  .estilo-footer p {
-    font-size: 14px;
-  }
-  .propiedade h2 {
-    font-size: 24px;
-  }
-  .propiedade h4 {
-    font-size: 17px;
-  }
+
   #box2 h1 {
     font-size: 30px;
   }
@@ -363,7 +316,7 @@ circle:nth-child(2) {
     height: 40px;
   }
   #box3 i {
-    font-size: 12px;
+    font-size: 10px;
   }
   #box3 .body-nome {
     font-size: 14px;
@@ -380,7 +333,7 @@ circle:nth-child(2) {
     font-size: 14px;
   }
   #box3 i {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) { /*xl*/ }

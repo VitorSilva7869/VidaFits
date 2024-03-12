@@ -145,13 +145,16 @@ h1, h2 {
 .container-dropdown {
   margin: 10px 30px;
 }
-.container-dropdown button {
+.container-dropdown a {
+  color: #055906;
+  text-decoration: none;
   margin-left: 10px;
   background: none;
   border: none;
 }
-.container-dropdown button:hover {
+.container-dropdown a:hover {
   color: #055906;
+  background: none;
 }
 
 .container-name img {

@@ -9,7 +9,7 @@
     <section class="container">
         <div class="row">
             <div class="col">
-                <h1 class="ms-5 mb-3 mt-3">Essenciais</h1>
+                <h1 class="ms-5 mb-3 mt-3">Populares</h1>
                 <div class="container-carrossel swiper">
                     <div class="carrossel-content">
                         <div class="swiper-wrapper">

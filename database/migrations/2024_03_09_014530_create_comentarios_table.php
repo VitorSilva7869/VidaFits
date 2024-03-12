@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuarios_id')->constrained();
+            $table->foreignId('users_id')->constrained();
             $table->foreignId('audios_id')->constrained();
             $table->text('comentario');
             $table->integer('estrela');

@@ -5,7 +5,7 @@
 
 /*Principal*/
 body {
-  background: white url(../imagens/fundo2.png);
+  background: white url(/image/fundo2.png);
   background-position: center top;
   /* Configura o tamanho da imagem de fundo (opcional) */
   background-size: cover;

@@ -4,14 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Comentarios;
 
-class audios extends Model
+class comentarios extends Model
 {
     use HasFactory;
-
-    public function comentarios()
+    
+    public function users()
     {
-        return $this->hasMany(Comentarios::class, 'audios_id');
+        return $this->belongsTo(User::class, 'users_id');
     }
 }
