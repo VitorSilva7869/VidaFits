@@ -17,6 +17,11 @@ class EventController extends Controller
         return view('home');
     }
 
+    public function indexMeditar(){
+        return view('meditar');
+    }
+    
+
     public function eventos(){
         $evento = audios::all();//Vai pegar tudo da tabela
         return view('eventos', ['evento' => $evento]);
@@ -27,7 +32,7 @@ class EventController extends Controller
 
         $comentarios = comentarios::where('users_id', $userId)->get();
         $evento = audios::with('comentarios')->find($id);
-        return view('eventoMeditarr', ['evento' => $evento, 'ComentarioUser' => $comentarios, 'userId' => $userId]);
+        return view('eventoMeditarr', ['evento' => $evento, 'ComentarioUser' => $comentarios, 'userId' => $userId, 'errorLoginComentario' => ""]);
     }
     
     

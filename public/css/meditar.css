@@ -1,127 +1,29 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
+/*--------Pesquisa-------*/
+/*card*/
+.card{
+  border: 1px solid #fff;
 }
-
-html, body {
-  height: 100%;
-  overflow-x: hidden; /* Esconde a barra de rolagens*/
-}
-
-/*------------Navegação----------*/
-.nav-link {
-  margin-bottom: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-.nav-link li {
-  float: left;
-  list-style: none;
-}
-.nav-link a {
-  display: block;
-  padding: 0 0.5em;
-  line-height: 2em;
-  font-size: 20px;
-  text-decoration: none;
-  color: #6ba103;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
-}
-
-.nav-link a {
-  position: relative;
-  text-decoration: none;
-  transition: all 0.15s ease-out;
-}
-.nav-link a:before {
-  content: "";
-  position: absolute;
+.img-card-style img{
+  transition: transform 0.2s ease-in-out;
+  border-radius: 15px;
   width: 100%;
-  height: 1px;
-  bottom: 0px;
-  left: 0;
-  background: #055906;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
+  height: 200.66px;
 }
-.nav-link a:hover {
-  color: #055906;
-  transition: all 0.15s ease-out;
+.img-card-style p{
+  color: #e4f6c3;
+  background: rgba(25, 156, 27, 0.2941176471);
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  transition: top 0.5s ease-in-out;
 }
-.nav-link a:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.icone {
-  width: 120px;
-  display: flex;
-  align-items: center;
-}
-.icone a {
-  color: #6ba103;
-  margin: 0 15px;
-  padding: 5px;
-  border-radius: 100%;
-  transition: 0.5s;
-}
-.icone a:hover {
-  color: white;
-  background: #055906;
-  border-radius: 100%;
-  padding: 11px;
+.img-card-style img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 5px rgb(135, 134, 134);
 }
 
-.hamburguer {
-  transition: transform 1s ease;
-}
-.hamburguer i {
-  color: #055906;
-}
-
-.hamburguer.rotated {
-  transform: rotate(360deg);
-}
-
-#myButton {
-  width: 100px;
-  height: 100px;
-  background-color: #ccc;
-  border: none;
-  border-radius: 50%;
-  transition: transform 0.5s ease;
-}
-
-#myButton.rotated {
-  transform: rotate(360deg);
-}
-
-.div1 {
-  order: 1;
-}
-
-.div2 {
-  order: 2;
-}
-
-.div3 {
-  order: 3;
-}
-
-#sumir {
-  display: flex;
-  align-items: center;
-}
-
-.navbar {
-  border-bottom: 1px solid #e4f6c3;
-}
 
 /*------------Meditação-----------*/
 .btn-style {
@@ -401,9 +303,7 @@ circle:nth-child(2) {
     border: 1px solid black;
   }
   /*footer*/
-  .estilo-footer p {
-    font-size: 14px;
-  }
+
 }
 @media (min-width: 576px) and (max-width: 767.98px) { /*sm*/
   /*Nav*/

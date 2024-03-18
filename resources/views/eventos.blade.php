@@ -19,7 +19,7 @@
                                     <img src="/image/{{ $event->imagem}}" alt="">
                                     <p class="minuto">{{ $event->minutos}}</p>
                                 </a>
-                                <i class="fa-solid fa-star text-warning mt-2 "></i><span class="text-success ps-1">1</span>
+                                <i class="fa-solid fa-star text-warning mt-2 "></i><span class="text-success ps-1">{{ $event->avaliacao}}</span>
                                 <p class="fw-bold fs-5 mb-0">{{ $event->titulo}}</p>
                                 <span class="ms-2">{{ $event->autor}}</span>
                             </div>

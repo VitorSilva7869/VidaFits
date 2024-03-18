@@ -14,4 +14,11 @@ class audios extends Model
     {
         return $this->hasMany(Comentarios::class, 'audios_id');
     }
+
+    protected $fillable = [
+        'titulo',
+        'descricao',
+        'autor',
+        'avaliacao', // Adicionando a propriedade 'avaliacao' ao fillable
+    ];
 }

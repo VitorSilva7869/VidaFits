@@ -17,12 +17,19 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventControllerBD;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PesquisarController;
 
 Route::get('/', [EventController::class, 'index']);
+Route::get('/meditar', [EventController::class, 'indexMeditar']);
 Route::get('/eventos', [EventController::class, 'eventos']);
 Route::get('/eventos/meditar/{id}', [EventController::class, 'show']);
 
-Route::post('/enviarComentario{id_audio}', [EventControllerBD::class, 'avaliacao'])->middleware('auth', 'usuarioOff');
+Route::controller(PesquisarController::class)->group(function(){
+    Route::get('/pesquisar', 'index')->name('pesquisar.index');
+    Route::post('/pesquisar','pesquisar')->name('pesquisar.pesquisar');
+});
+
+Route::post('/enviarComentario{id_audio}', [EventControllerBD::class, 'avaliacao']);
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/cadastrar','index')->name('cadastrar.index');

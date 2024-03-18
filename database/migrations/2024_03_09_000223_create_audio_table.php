@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('localizacao');
             $table->integer('minutos');
             $table->text('imagem');
-            $table->integer('avaliacao');
+            $table->float('avaliacao')->nullable();
             $table->timestamps();
         });
     }

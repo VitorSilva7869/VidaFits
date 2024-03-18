@@ -8,7 +8,9 @@
 
 @section('conteudo')
 
-
+    <audio id="myAudio"><source src="/audio/10m.mp3" type="audio/mpeg"></audio>
+    <audio id="dispertador"><source src="/audio/Kevin-MacLeod.mp3" type="audio/mpeg"></audio>
+    
     <section class="container mt-5 d-lg-block d-none">
         <div class="row">
             <div class="col-md-6">
@@ -51,10 +53,9 @@
                 <div class="col-12 col-md-6 order-md-1" id="box2">
                     <h1 class="mb-0 d-none d-md-block tamanho">{{$evento->titulo}}</h1>
                     <span class="span ms-3">by {{$evento->autor}}</span><br>
-                    <i class="fa-solid fa-star text-warning mt-2 "></i><span class="text-success ps-1">4.5</span> 
+                    <i class="fa-solid fa-star text-warning mt-2 "></i><span class="text-success ps-1">{{$evento->avaliacao}}</span> 
                     <i class="fa-solid fa-music ms-3"></i><span class="ms-1">{{$evento->minutos}}</span>
-                    <p>{{$evento->descricao}}
-                    </p>
+                    <p>{{$evento->descricao}}</p>
                     <div style="background: #dffea5; margin: 30px 15px; height: 1px;"></div>
 
                 </div>
@@ -108,6 +109,7 @@
                             <input type="submit" class="btn-style-comentario" placeholder="Enviar">
                             <textarea class="form-control" name="comentario" placeholder="Comente sua experiencia do evento..."></textarea>
                         </div>
+                        
                         <div class="text-center star-style">
                             <label for="estrela1" onclick="clicarEstrela(event)" onmouseover="acenderEstrelas(event)" onmouseout="apagarEstrelas()"><i class="star fa-solid fa-star ms-2" ></i></label>
                             <label for="estrela2" onclick="clicarEstrela(event)" onmouseover="acenderEstrelas(event)" onmouseout="apagarEstrelas()"><i class="star fa-solid fa-star"></i></label>
@@ -120,6 +122,10 @@
                         <input type="radio" class="estrela-radio" name="radio_estrela" id="estrela3" value="3" />
                         <input type="radio" class="estrela-radio" name="radio_estrela" id="estrela4" value="4" />
                         <input type="radio" class="estrela-radio" name="radio_estrela" id="estrela5" value="5" />
+                        @error('comentario')
+                            <div><p class="text-danger text-center">{{$message}}</p></div>
+                        @enderror
+                        
                     </form>
                 </div>
                 
@@ -141,11 +147,19 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="d-flex">
-                                <h1 class="me-3">3.5</h1>
+                                <h1 class="me-3">{{$evento->avaliacao}}</h1>
                                 <div class="">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    @php
+                                        $comentariosAudio = $evento->comentarios;
+                                        $numeroAvaliacoes = $comentariosAudio->count();
+                                        $inteiroAvaliação = intval($evento->avaliacao);
+                                    @endphp
+                                    @for($i = 0; $i < $inteiroAvaliação; $i++)
+                                        <i class="fa-solid fa-star" aria-hidden="true"></i> 
+                                        
+                                    @endfor
                                     <div>
-                                        <span>14 avaliações</span>
+                                        <span>{{$numeroAvaliacoes}} Avaliações</span>
                                     </div>
                                 </div>
                             </div>
