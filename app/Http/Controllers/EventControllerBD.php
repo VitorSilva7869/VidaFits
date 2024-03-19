@@ -73,4 +73,14 @@ class EventControllerBD extends Controller
         }
 
     }
+    public function comentarios($id){
+        $userId = auth::id();//pegar o comentario do usuario
+
+        $comentarios = comentarios::where('users_id', $userId)
+                ->where('audios_id', $id)
+                ->get();
+
+        $evento = audios::with('comentarios')->find($id);
+        return view('comentarioMais', ['evento' => $evento, 'ComentarioUser' => $comentarios, 'userId' => $userId, 'errorLoginComentario' => ""]);
+    }
 }

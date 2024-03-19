@@ -8,9 +8,8 @@
 
 @section('conteudo')
 
-    <audio id="myAudio"><source src="/audio/10m.mp3" type="audio/mpeg"></audio>
-    <audio id="dispertador"><source src="/audio/Kevin-MacLeod.mp3" type="audio/mpeg"></audio>
-    
+    <audio id="myAudio"><source src="/audio/{{$evento->localizacao}}" type="audio/mpeg"></audio>
+    <audio id="dispertador"><source src="/audio/dispertador.mp3" type="audio/mpeg"></audio>
     <section class="container mt-5 d-lg-block d-none">
         <div class="row">
             <div class="col-md-6">
@@ -40,7 +39,7 @@
                                 <h2 id="timer" class="number">00:00</h2>
                             </div>
                             <div class="mat-3">
-                                <button class="btn-style px-sm-4 me-sm-1 mt-4" id="play" onclick="startTimer(1)">COMEÇAR <i class="ms-2 fa-solid fa-play"></i></button>
+                                <button class="btn-style px-sm-4 me-sm-1 mt-4" id="play" onclick="startTimer('{{$evento->minutos}}')">COMEÇAR <i class="ms-2 fa-solid fa-play"></i></button>
                             </div>
                             <div class="mt-4">
                                 <button class="btn-style" onclick="pauseTimer()" id="returnPause" style="display: none"><i class="fa-solid fa-pause"></i></button>
@@ -229,5 +228,10 @@
       </div>
     
 <script src="/js/eventoMeditarScript.js"></script>
+<script>
+    function comentariosMais() {
+        window.location.href = '/eventos/meditar/comentarios/{{ $evento->id}}';
+    }
+</script>
 
 @endsection

@@ -30,7 +30,10 @@ class EventController extends Controller
     public function show($id){
         $userId = auth::id();//pegar o comentario do usuario
 
-        $comentarios = comentarios::where('users_id', $userId)->get();
+        $comentarios = comentarios::where('users_id', $userId)
+                ->where('audios_id', $id)
+                ->get();
+
         $evento = audios::with('comentarios')->find($id);
         return view('eventoMeditarr', ['evento' => $evento, 'ComentarioUser' => $comentarios, 'userId' => $userId, 'errorLoginComentario' => ""]);
     }

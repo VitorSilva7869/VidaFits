@@ -30,6 +30,7 @@ Route::controller(PesquisarController::class)->group(function(){
 });
 
 Route::post('/enviarComentario{id_audio}', [EventControllerBD::class, 'avaliacao']);
+Route::get('/eventos/meditar/comentarios/{id}', [EventControllerBD::class, 'comentarios']);
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/cadastrar','index')->name('cadastrar.index');

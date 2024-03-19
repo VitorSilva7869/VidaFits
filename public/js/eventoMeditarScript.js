@@ -223,6 +223,3 @@ function clicarEstrela(e) {
     
 }
   
-function comentariosMais() {
-    window.location.href = 'comentarioMais.html';
-}
